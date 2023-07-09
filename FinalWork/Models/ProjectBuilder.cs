@@ -22,7 +22,7 @@ namespace FinalWork.Models
 
         public ProjectBuilder SetSummary(string summary)
         {
-            project.Summary = summary;
+            project.Note = summary;
             return this;
         }
 

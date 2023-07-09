@@ -19,8 +19,8 @@ namespace FinalWork.Tests.UI
         public void POSITIVE_1_CreateNewProject()
         {
             Project project = new ProjectBuilder()
-                .SetName("Project for Create Project Test")
-                .SetSummary("Create Project Test Summary")
+                .SetName("Name for Create Project Test")
+                .SetSummary("Summary for Create Project Test")
                 .Build();
 
             var page = new ProjectsPage(Driver);
@@ -61,8 +61,8 @@ namespace FinalWork.Tests.UI
         public void POSITIVE_4_DeleteProject()
         {
             Project project = new ProjectBuilder()
-                .SetName("ProjectNameForDelete")
-                .SetSummary("ProjectSummaryForDelete")
+                .SetName("Name for Delete Project Test")
+                .SetSummary("Summary for Delete Project Test")
                 .Build();
 
             var page = new ProjectsPage(Driver);
@@ -80,8 +80,8 @@ namespace FinalWork.Tests.UI
             string expectedNotificationText = "The project has been marked for deletion and will be removed shortly.";
 
             Project project = new ProjectBuilder()
-                .SetName("ProjectNameForTooltip")
-                .SetSummary("ProjectSummaryForTooltip")
+                .SetName("Name for ToolTip Test")
+                .SetSummary("Summary for ToolTip Test")
                 .Build();
 
             var page = new ProjectsPage(Driver);
