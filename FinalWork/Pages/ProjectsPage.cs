@@ -210,7 +210,7 @@ namespace FinalWork.Pages
             CreateProjectButton().Click();
             WaitCreateProjectDialogWindow();
             NameInput().SendKeys(project.Name);
-            SummaryInput().SendKeys(project.Summary);
+            SummaryInput().SendKeys(project.Note);
             ConfirmProjectButton().Click();
         }
 
