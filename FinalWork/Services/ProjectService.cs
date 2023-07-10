@@ -1,10 +1,7 @@
-﻿using Newtonsoft.Json.Linq;
-using RestSharp;
-using System.Net;
+﻿using RestSharp;
 using FinalWork.Clients;
 using FinalWork.Models;
 using FinalWork.Utilites.Configuration;
-using FinalWork.Utilites.Helpers;
 
 namespace FinalWork.Services
 {

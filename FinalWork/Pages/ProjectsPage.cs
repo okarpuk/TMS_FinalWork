@@ -12,12 +12,12 @@ namespace FinalWork.Pages
 
         private static readonly By CreateNewProjectButtonBy = By.CssSelector("button.ui.button");
         private static readonly By ProjectNameInputBy = By.XPath("//input[@placeholder='Project name']");
-        private static readonly By ProjectNameIsRequiredMessageBy = By.XPath("//li[normalize-space()='The name field is required.']");       
+        private static readonly By ProjectNameIsRequiredMessageBy = By.ClassName("message-block");
         private static readonly By ProjectSummaryInputBy = By.TagName("textarea");
         private static readonly By ConfirmCreatedProjectButtonBy = By.XPath("//button[@class='ui button primary']");
         private static readonly By SelectFileButtonBy = By.CssSelector("button.ui.compact.fluid.button");
         private static readonly By UploadFileLinkBy = By.CssSelector("input[type=\"file\"]");
-        private static readonly By DeleteProjectIconBy = By.XPath("//td[4]");
+        private static readonly By DeleteProjectIconBy = By.CssSelector("[data-action=\"delete\"]");
         private static readonly By CheckboxToDeleteProjectBy = By.XPath("//label[@data-target='confirmationLabel']");
         private static readonly By ConfirmDeleteProjectButtonBy = By.CssSelector("button.ui.negative.button");
         private static readonly By ProjectDeletionProcessBy = By.XPath("//i[@class='fas fa-ban icon-deleted-entity']");
@@ -29,9 +29,12 @@ namespace FinalWork.Pages
 
         public ProjectsPage(IWebDriver driver, bool openPageByUrl) : base(driver, openPageByUrl)
         {
+            _logger.Info("Project page opened");
+
         }
         public ProjectsPage(IWebDriver driver) : base(driver, false)
         {
+            _logger.Info("Project page opened");
         }
 
         public override bool IsPageOpened()

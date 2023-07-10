@@ -1,0 +1,10 @@
+﻿{
+  "allure": {
+    "directory": "allure-results",
+    "links": [
+      "{links}",
+      "https://aleh.testmo.net/{issue}",
+      "https://aleh.org/{tms}"
+    ]
+  }
+}

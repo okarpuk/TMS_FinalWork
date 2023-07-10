@@ -1,10 +1,9 @@
-﻿using Newtonsoft.Json.Linq;
-using FinalWork.Models;
+﻿using FinalWork.Models;
 using FinalWork.Utilites.Helpers;
-using RestSharp;
 using Allure.Commons;
 using NUnit.Allure.Attributes;
 using NLog;
+
 
 namespace FinalWork.Tests.API
 {
@@ -18,7 +17,15 @@ namespace FinalWork.Tests.API
         public Project invalidProjectRequest = TestDataHelper.GetProjectRequest("GetInvalidProjectRequest.json");
         public Project invalidProjectExpectedResponse = TestDataHelper.GetInvalidProjectResponse("GetInvalidProjectResponse.json");
 
-        [Test]
+        [Test(Description = "This test gets valid project via API")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [AllureOwner("Aleh Karpuk")]
+        [AllureSuite("PositiveTestsSuite")]
+        [AllureSubSuite("GetValidProject")]
+        [AllureIssue("TestmoIssue_1")]
+        [AllureTms("TesmoTestCase_1")]
+        [AllureTag("Smoke")]
+        [AllureLink("https://aleh.testmo.net/")]
         public void TEST_1_GetValidProject()
         {
             var actualValidProject = _projectService.GetProject(validProjectRequest.Id);
@@ -33,7 +40,15 @@ namespace FinalWork.Tests.API
             });
         }
 
-        [Test]
+        [Test(Description = "This test tries to get invalid project via API")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [AllureOwner("Aleh Karpuk")]
+        [AllureSuite("NegativeTestsSuite")]
+        [AllureSubSuite("GetInvalidProject")]
+        [AllureIssue("TestmoIssue_2")]
+        [AllureTms("TesmoTestCase_2")]
+        [AllureTag("Smoke")]
+        [AllureLink("https://aleh.testmo.net/")]
         public void TEST_2_GetInvalidProject()
         {
             var invalidActualProject = _projectService.GetInvalidProject(invalidProjectExpectedResponse.Id);

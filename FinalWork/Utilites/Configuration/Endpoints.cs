@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace FinalWork.Utilites.Configuration
+﻿namespace FinalWork.Utilites.Configuration
 {
     public class Endpoints
     {

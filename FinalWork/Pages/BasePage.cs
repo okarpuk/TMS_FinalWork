@@ -1,16 +1,12 @@
 ﻿using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using FinalWork.Utilites.Configuration;
 using FinalWork.Core;
+using NLog;
 
 namespace FinalWork.Pages
 {
     public abstract class BasePage
     {
+        protected static readonly Logger _logger = LogManager.GetCurrentClassLogger();
         protected IWebDriver Driver;
         protected WaitService WaitService;
 

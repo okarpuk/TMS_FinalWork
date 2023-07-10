@@ -1,14 +1,7 @@
-﻿using Microsoft.VisualStudio.TestPlatform.ObjectModel;
-using RestSharp;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using RestSharp;
 using FinalWork.Clients;
 using FinalWork.Models;
 using FinalWork.Utilites.Configuration;
-using System.Net;
 
 namespace FinalWork.Services
 {
